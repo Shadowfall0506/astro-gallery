@@ -1,0 +1,47 @@
+---
+import {Image} from "astro:assets"
+---
+<astro>
+    <header class="bg-gray-600 text-white py-2 shadow-lg">
+      
+      <div class="container mx-auto flex justify-between items-center relative z-10">
+        <div class="text-3xl font-extrabold justify-start">
+          <a href="/" class="flex gap-x-4 items-center">
+            <Image
+                src="/heartbeat.png"
+                alt="rhythm nation logo"
+                width={64}
+                height={64}
+                format="webp"
+                class="w-16"
+            />
+    
+            <p class="hover:text-red-500 transition-colors duration-300 transform hover:scale-105 text-glow-red">Astro Tonight</p>
+    
+        </div>
+        <nav class="space-x-6">
+          <a href="/" class="hover:text-red-500 transition-colors duration-300 transform hover:scale-105 text-glow-red">Home</a>
+          <a href="/gallery" class="hover:text-red-500 transition-colors duration-300 transform hover:scale-105 text-glow-red">Gallery</a>
+          <a href="/forums" class="hover:text-red-500 transition-colors duration-300 transform hover:scale-105 text-glow-red">Forums</a>
+          <a href="/about" class="hover:text-red-500 transition-colors duration-300 transform hover:scale-105 text-glow-red">About</a>
+          <a href="/contact" class="hover:text-red-500 transition-colors duration-300 transform hover:scale-105 text-glow-red">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="absolute inset-0 z-0">
+      <div class="parallax-bg shadow-lg glow-red"></div>
+    </div>
+  </astro>
+  
+  <style>
+    /* Text glow effect with a red color */
+    .text-glow-red {
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
+  
+    /* Background glow effect with a red color */
+    .glow-red {
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+  </style>
+  
