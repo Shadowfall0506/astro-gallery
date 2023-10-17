@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import H1 from "../components/H1.astro";
+import Main from "../components/Main.astro";
+import Layout from "../layouts/Layout.astro";
+import PlanetList from "../components/PlanetList.astro";
+
+const planets = await getCollection("planets");
+console.log(planets)
+---
+
+<Layout title="Planet Gallery | Astro Tonight">
+	<section class="page-content">
+		<div class="container">
+			<h2>Planet Gallery</h2>
+			{planets.map(planet => (
+				<PlanetList planets={planets}/>
+			))}
+		</div>
+	</section>
+</Layout>

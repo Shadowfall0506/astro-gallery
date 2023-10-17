@@ -3,11 +3,45 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import H1 from '../components/H1.astro';
 import Main from '../components/Main.astro';
+import { Image } from 'astro:assets';
+import { slide } from 'astro:transitions';
+import Showcase from '../components/Showcase.astro';
+import Features from '../components/Features.astro';
+import Tabs from '../components/Tabs.astro';
+
+export const prerender = true
 ---
 
 <Layout title="Welcome to Galaxy">
 	<Main>
-		<H1 text="Galaxy HUB"/>
+		<!--<H1 text="Galaxy HUB"/> -->
+		<Showcase />
+		<Features />
+		<section class="page-content">
+			<div class="container">
+			  <h2>Get Started With Astro</h2>
+			  <p>
+				Get a new Astro project up and running locally with our helpful
+				create-astro CLI wizard!
+			  </p>
+			  
+			  <Tabs headings = {['PM', 'Lead', 'Developer']} contents =
+			  {['Denis Anthony', 'Rajaesh Khanna', 'Amit Kumar']}/>
+	  
+			  <h3>Start Building</h3>
+			  <p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum
+				deserunt inventore ut voluptate, officia maiores repellat tenetur
+				praesentium omnis est ex tempora a necessitatibus reiciendis at et
+				dignissimos. Ipsam eius consequuntur cupiditate aperiam porro, esse
+				laborum impedit nesciunt ut voluptatum assumenda aspernatur libero
+				iusto error molestias dolorum, necessitatibus labore?
+			  </p>
+			</div>
+		  </section>
+	
 	</Main>
 </Layout>
+
+
 

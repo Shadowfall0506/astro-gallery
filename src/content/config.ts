@@ -1,13 +1,14 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
 const planetCollection = defineCollection({
     type: 'content',
-    schema: z.object({
-        name: z.string(),
-        category: z.string(),
+    schema: ({image}) => 
+        z.object({
+        author: z.string(),
+        categories: z.string(),
+        types: z.string(),
         date: z.string(),
-        featured: z.string(),
-        image: z.string(),
+        image: image(),
         title: z.string() 
     }),
 });
